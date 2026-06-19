@@ -59,16 +59,12 @@ body::after{
 
 /* ===== KEYFRAMES ===== */
 @keyframes fadeUp{
-  from{opacity:0;transform:translateY(24px)}
+  from{opacity:0;transform:translateY(20px)}
   to{opacity:1;transform:translateY(0)}
 }
 @keyframes fadeScale{
-  from{opacity:0;transform:scale(.96) translateY(12px)}
+  from{opacity:0;transform:scale(.97) translateY(8px)}
   to{opacity:1;transform:scale(1) translateY(0)}
-}
-@keyframes shine{
-  0%{background-position:-300% center}
-  100%{background-position:300% center}
 }
 @keyframes breathe{
   0%,100%{opacity:.4}
@@ -134,15 +130,15 @@ body::after{
   font-weight:300;
 }
 .splash-btn{
-  padding:14px 48px;
-  border:1px solid rgba(130,200,255,0.08);
+  padding:18px 0;
+  border:none;
   background:transparent;
   color:rgba(180,230,255,0.5);
   font-size:.8rem;
   font-family:Inter,sans-serif;
   letter-spacing:4px;
   cursor:pointer;
-  transition:all .6s;
+  transition:all .4s;
   position:relative;
   text-transform:uppercase;
   font-weight:300;
@@ -311,14 +307,13 @@ body::after{
   pointer-events:none;
 }
 .orb:hover{
-  transform:scale(1.1);
-  border-color:rgba(180,200,230,0.5);
+  transform:scale(1.08);
+  border-color:rgba(180,200,230,0.3);
   box-shadow:
-    0 0 30px rgba(40,80,200,0.15),
-    0 0 80px rgba(40,80,200,0.08),
-    0 0 140px rgba(40,80,200,0.04),
-    inset 0 0 35px rgba(40,80,200,0.08),
-    inset 0 8px 40px rgba(180,200,230,0.05);
+    0 0 20px rgba(40,80,200,0.08),
+    0 0 40px rgba(40,80,200,0.04),
+    inset 0 0 25px rgba(40,80,200,0.06),
+    inset 0 8px 30px rgba(180,200,230,0.04);
 }
 .orb-label{
   font-family:'Cormorant Garamond',serif;
@@ -365,10 +360,10 @@ body::after{
   position:relative;
 }
 .modal-close{
-  position:absolute;top:12px;right:14px;
+  position:absolute;top:14px;right:16px;
   background:none;border:none;color:var(--text-dim);
   font-size:1.3rem;cursor:pointer;transition:all .3s;line-height:1;
-  width:30px;height:30px;display:flex;align-items:center;justify-content:center;
+  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
 }
 .modal-close:hover{color:var(--gold)}
 .modal-cat{
@@ -522,7 +517,7 @@ body::after{
   font-family:'Cormorant Garamond',serif;
   font-size:.65rem;font-style:italic;
   letter-spacing:1.5px;text-transform:uppercase;
-  padding:4px 14px;
+  padding:6px 16px;
   border:1px solid rgba(200,164,92,0.08);
   background:transparent;
   color:var(--text-dim);
@@ -712,7 +707,7 @@ body::after{
 /* ===== CART ===== */
 .cart-fab{
   position:fixed;bottom:28px;right:24px;z-index:50;
-  width:50px;height:50px;
+  width:54px;height:54px;
   border-radius:50%;
   border:1px solid rgba(200,164,92,0.1);
   background:rgba(8,7,10,0.8);
@@ -974,7 +969,7 @@ const MENU_RAW = {
   tea:{label:"Tea",icon:"🍵",items:[["tea","$3"],["𝓲𝓬𝓮 𝓽𝓮𝓪",""],["peach","$4"],["lemon berry","$4"],["lemon passion","$4"]]},
   icecream:{label:"Ice Cream",icon:"🍦",items:[["diet king vanila","$2"],["diet king chocolate","$2"],["king crunchy","$2"],["king vanilla","$2"],["king chocolate","$2"],["paradiso cheescacke","$2"],["paradiso pistachio","$2"],["paradiso chocolate","$2"],["paradiso achta","$2"],["les saveurs chocolate fudge","$2"],["les saveurs cheesecake","$2"],["les saveurs achta","$2"],["les saveurs pistachio","$2"],["minimax vanilla","$1"],["minimax chocolate","$1"],["krazy kone vanilla","$1"],["krazy kone chocolate","$1"],["krazy kone strawberry","$1"],["tubby chocolate","$0.50"],["tubby vanilla","$0.50"],["tubby strawberry","$0.50"],["imperiale vanilla strawberry chocolate","$0.50"],["taxi vanilla","$0.50"],["princesse blackberry","$0.50"],["princesse strawberry","$0.50"],["flipper lemon","$0.50"],["flipper strawberry","$0.50"],["fuji vanilla","$0.50"],["fuji chocolate","$0.50"],["jolly blackberry","$0.50"],["jolly orange","$0.50"],["jolly chocolate","$0.50"],["jolly strawberry","$0.50"],["jolly blackberry diet","$0.50"],["jolly chocolate diet","$0.50"],["jolly lemon diet","$0.50"]]},
   food:{label:"Food",icon:"🍔",items:[["𝓽𝓸 𝓼𝓱𝓪𝓻𝓮",""],["Mini burgers","$10"],["Mozzarella sticks","$6"],["Halloumi Bites, side sauce","$7"],["Jalapenos & cheddar bites, barbecue sauce","$7"],["French fries, house sauce","$5"],["Wedges, Aioli sauce","$6"],["Dynamite Chicken","$8","Fried chicken breast topped with sweet & spicy sauce"],["Crunchy Chicken bites, honey mustard sauce","$8","Fried crispy chicken, honey mustard sauce"],["Nachos & Cheese","$10","Served with avocado sauce, tomato salsa"],["𝓼𝓪𝓵𝓪𝓭𝓼",""],["Classic Caesar","$13","Grilled chicken breast, crunchy lettuce, croutons, parmesan cheese"],["Watermelon & greek fetta","$15","Baby roca, glaze balsamic"],["Chili Crab Stick Salad","$14","Cucumber, iceberg, shredded carrots, little spicy mayo sauce"],["Little green","$11","Mix green leaves, cucumber, cherry tomato, slice raddish, lemon mustard sauce"],["𝓫𝓾𝓻𝓰𝓮𝓻𝓼 & 𝓼𝓪𝓷𝓭𝔀𝓲𝓬𝓱𝓮𝓼",""],["Classic Cheese","$13","Grilled beef, cheddar cheese, crispy bacon, house sauce, iceberg"],["Big Man","$16","Double beef burger, cheddar cheese, fried eggs & bacon"],["Truffle Joy","$14","Grilled beef, melted cheese, truffle mayo, baby roca"],["Light Beef Burger","$13","Mustard, iceberg, tomato, grilled potato, cereals bun"],["Mighty Grilled Chicken","$13","Grilled chicken breast, fried mozzarella, aioli sauce"],["Honey Mustard Chicken","$12","Fried chicken breast topped with honey mustard sauce, melted cheddar"],["Hot Honey Chicken","$12","Fried chicken breast glazed with spicy honey sauce, crunchy iceberg"],["Steak & Mushroom","$14","Grilled beef tenderloin, caramelized onion, fresh mushroom, melted cheese, mustard mayo sauce"],["Club Sandwich","$13","Grilled chicken breast, fried eggs, crispy ham & 2 cheese"],["Taouk Wrap","$10","Aioli sauce, pickles"],["Chicken Fajitas","$12","Side guacamole sauce"],["𝓶𝓪𝓲𝓷 𝓬𝓸𝓾𝓻𝓼𝓮𝓼",""],["Grilled Chicken Breast","$16","Mix green, grilled potato, honey mustard dip"],["Chicken Funghi","$18","Grilled chicken breast, creamy mushroom sauce, french fries"],["Steak & Fries","$20","Grilled beef tenderloin, forester sauce, french fries"],["Crunchy Chicken Milanese","$14","Mix green, french fries, gremolata mayo sauce"],["Italian Chicken Parmigiana","$18","Topped with tomato sauce, mozzarella & parmesan cheese, french fries"],["Golden Crispy Chicken platter","$14","French fries, mix green, side sauces"]]},
-  soft:{label:"Soft Drinks",icon:"🥤",items:[["pepsi","$2"],["pepsi diet","$2"],["7UP","$2"],["7UP diet","$2"],["mirinda","$2"],["st.pelegrino","$3"],["lipton iced tea","$2"],["lipton iced tea diet","$2"],["redbull","$5"],["redbull light","$5"],["dark blue","$3"],["water","$0.50"]]},
+  soft:{label:"Soft Drinks",icon:"🥤",items:[["pepsi","$2"],["pepsi diet","$2"],["7UP","$2"],["7UP diet","$2"],["mirinda","$2"],["st.pelegrino","$3"],["lipton iced tea","$2"],["lipton iced tea diet","$2"],["redbull","$5"],["redbull light","$5"],["dark blue","$3"]]},
   tabaco:{label:"Tabaco",icon:"💨",items:[["Double Apple","$10"],["lemon mint","$10"],["Grape mint","$10"],["gum mint","$10"]]}
 };
 
@@ -1003,6 +998,7 @@ function addOrder(item){
   else { orders.push({...item, qty: 1}); }
   updateCartUI();
   renderCart();
+  try { localStorage.setItem("menuCart", JSON.stringify(orders)); } catch(e) {}
   const fab = document.getElementById("cartFab");
   fab.classList.remove("flash");
   void fab.offsetWidth;
@@ -1152,6 +1148,11 @@ function openCategory(id){
     b.style.setProperty("--dur", 5 + Math.random()*10 + "s");
     b.style.setProperty("--delay", Math.random()*12 + "s");
     bubblesEl.appendChild(b);
+  }
+
+  // Load saved cart from localStorage
+  if (typeof Storage !== "undefined" && localStorage.getItem("menuCart")) {
+    try { orders = JSON.parse(localStorage.getItem("menuCart")); } catch(e) {}
   }
 
   const overlay = document.getElementById("categoryOverlay");
