@@ -998,11 +998,20 @@ function addOrder(item){
   else { orders.push({...item, qty: 1}); }
   updateCartUI();
   renderCart();
-  try { localStorage.setItem("menuCart", JSON.stringify(orders)); } catch(e) {}
+  saveCart();
   const fab = document.getElementById("cartFab");
   fab.classList.remove("flash");
   void fab.offsetWidth;
   fab.classList.add("flash");
+}
+function saveCart(){
+  try { localStorage.setItem("menuCart", JSON.stringify(orders)); } catch(e) {}
+}
+function loadCart(){
+  try {
+    const saved = localStorage.getItem("menuCart");
+    if(saved){ orders = JSON.parse(saved); }
+  } catch(e) {}
 }
 function adjustOrder(idx, delta){
   const o = orders[idx];
@@ -1010,11 +1019,13 @@ function adjustOrder(idx, delta){
   if(o.qty <= 0){ orders.splice(idx, 1); }
   updateCartUI();
   renderCart();
+  saveCart();
 }
 function clearAll(){
   orders = [];
   updateCartUI();
   renderCart();
+  saveCart();
 }
 function renderCart(){
   const el = document.getElementById("cartItems");
@@ -1381,7 +1392,10 @@ function enterSite(){
   else msg = "good evening, welcome to eye to sky";
   document.getElementById("greeting").textContent = msg;
 })();
+loadCart();
 renderOrbs();
+updateCartUI();
+renderCart();
 </script>
 </body>
 </html>
